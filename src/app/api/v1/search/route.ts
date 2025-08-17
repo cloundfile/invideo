@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json(JSON.parse(videoCache), { status: 200 });
     }
 
-    const url = `https://superflixapi.digital/pesquisar/?sort=&s=${encodeURIComponent(query)}`;
+    const url = `https://superflixapi.work/pesquisar/?sort=&s=${encodeURIComponent(query)}`;
     const { data: html } = await axios.get(url);
     const $ = cheerio.load(html);
 
